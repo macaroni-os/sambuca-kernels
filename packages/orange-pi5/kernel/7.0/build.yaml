@@ -1,0 +1,11 @@
+image: "macaronios/mark-31:latest-arm64"
+env:
+- TARGETDIR=/pkgdir
+- KVER={{ ( index .Values.labels "package.version" ) }}
+prelude:
+- >-
+  ls /usr/src/ -l &&
+  mkdir -p ${TARGETDIR}/boot/dtb-${KVER}/rockchip
+- cp orangepi5-config ${TARGETDIR}/boot/config-${KVER}
+- bash build.sh "{{ ( index .Values.labels "package.version" ) }}"
+package_dir: /pkgdir

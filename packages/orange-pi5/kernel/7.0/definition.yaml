@@ -1,0 +1,12 @@
+name: orangepi5-vanilla
+version: 7.0.4
+category: kernel-7.0
+annotations:
+  kernel:
+    eol: "N/A"
+    lts: false
+    released: "2026-04-13"
+    suffix: orangepi5
+    type: vanilla
+labels:
+  package.version: 7.0.4
