@@ -13,7 +13,9 @@ Every branch is for a specific release:
 * `wyrm`: Macaroni OS Wyrm release - ARM64/ARM
 
 
-## Packages list
+## Build binary packages
+
+### Packages list
 
 In order to use the tree you need to create the index tree file:
 
@@ -35,7 +37,7 @@ $> anise-build tree pkglist -t packages -o json
 $> anise-build tree pkglist -t packages -o yaml
 ```
 
-## Show the rendered build.yaml of a package
+### Show the rendered build.yaml of a package
 
 ```
 $> anise-build tree render -t packages/  kernel-7.0/orangepi5-vanilla
@@ -55,7 +57,7 @@ package_dir: /pkgdir
 
 ```
 
-## Build a package
+### Build a package
 
 ```
 $> PACKAGES="kernel-7.0/orangepi5-vanilla" make build
